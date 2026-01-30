@@ -1,158 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#ffffff" />
-  <title>Links — Palestra PUC‑SP (IA aplicada à Engenharia)</title>
-  <style>
-    :root { --bg:#fff; --fg:#111; --muted:#555; --card:#f7f7f8; --border:#e7e7ea; --accent:#0b57d0; }
-    * { box-sizing: border-box; }
-    body { font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; color: var(--fg); background: var(--bg); }
-    .wrap { max-width: 880px; margin: 0 auto; padding: 24px; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom: 16px; }
-    h1 { font-size: clamp(22px, 3.6vw, 34px); margin: 0; }
-    h2 { font-size: clamp(18px, 2.8vw, 24px); margin: 24px 0 8px; }
-    p.lead { color: var(--muted); margin: 4px 0 0; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
-    ul.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .item { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
-    .item a { color: var(--accent); text-decoration: none; word-break: break-word; }
-    .item a:hover { text-decoration: underline; }
-    .meta { font-size: 14px; color: var(--muted); margin-top: 4px; }
-    .title { font-weight: 600; }
-    .actions { display:flex; gap: 8px; }
-    button.copy, button.topcopy { appearance: none; border: 1px solid var(--border); background: #fff; padding: 8px 10px; border-radius: 10px; cursor: pointer; }
-    button.copy:hover, button.topcopy:hover { border-color: #ccc; }
-    .hint { color: var(--muted); font-size: 13px; margin-top: 8px; }
-    footer { margin: 28px 0 8px; color: var(--muted); font-size: 13px; text-align:center; }
-    .grid { display: grid; gap: 16px; }
-    @media (min-width: 820px) { .grid { grid-template-columns: 1fr; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Links e recursos sobre Engenharia de Estruturas e IA. Leandro Cavalcanti.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Leandro Cavalcanti | Engenharia & IA</title>
+
+    <!-- Fonts: Inter for UI, Outfit for Headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div>
-        <h1>Links — Palestra PUC‑SP</h1>
-        <p class="lead">IA aplicada à Engenharia • Leandro Hildinger Cavalcanti</p>
-      </div>
-      <button class="topcopy" id="copyAll">Copiar <strong>todos</strong> os links</button>
-    </header>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Kits de Prompts (Guias e Exemplos)</h2>
-        <ul class="links">
-          <li class="item">
-            <div>
-              <div class="title">Galeria de Prompts do Google AI Studio</div>
-              <a href="https://ai.google.dev/gemini-api/prompts" target="_blank" rel="noopener">https://ai.google.dev/gemini-api/prompts</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://ai.google.dev/gemini-api/prompts">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">OpenAI Cookbook</div>
-              <a href="https://cookbook.openai.com/" target="_blank" rel="noopener">https://cookbook.openai.com/</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://cookbook.openai.com/">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Guia de Prompt Engineering (OpenAI)</div>
-              <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" rel="noopener">https://platform.openai.com/docs/guides/prompt-engineering</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://platform.openai.com/docs/guides/prompt-engineering">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Prompt Engineering Guide (dair‑ai)</div>
-              <a href="https://github.com/dair-ai/Prompt-Engineering-Guide" target="_blank" rel="noopener">https://github.com/dair-ai/Prompt-Engineering-Guide</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://github.com/dair-ai/Prompt-Engineering-Guide">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Awesome Prompt Engineering (promptslab)</div>
-              <a href="https://github.com/promptslab/Awesome-Prompt-Engineering" target="_blank" rel="noopener">https://github.com/promptslab/Awesome-Prompt-Engineering</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://github.com/promptslab/Awesome-Prompt-Engineering">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Tutorial Interativo da Anthropic (Claude)</div>
-              <a href="https://github.com/anthropics/prompt-eng-interactive-tutorial" target="_blank" rel="noopener">https://github.com/anthropics/prompt-eng-interactive-tutorial</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://github.com/anthropics/prompt-eng-interactive-tutorial">Copiar</button></div>
-          </li>
-        </ul>
-        <p class="hint">Dica: clique em “Copiar” para levar o link para a área de transferência.</p>
-      </div>
+    <div class="background-glow"></div>
 
-      <div class="card">
-        <h2>Cases de Uso de IA em Engenharia</h2>
-        <ul class="links">
-          <li class="item">
-            <div>
-              <div class="title">Altair — 100 Casos de Uso</div>
-              <a href="https://web.altair.com/ai-powered-engineering-use-cases" target="_blank" rel="noopener">https://web.altair.com/ai-powered-engineering-use-cases</a>
+    <main class="container">
+
+        <!-- Profile Section -->
+        <header class="profile">
+            <div class="profile-image-container">
+                <div class="profile-avatar">
+                    <img src="profile.png" alt="Leandro Cavalcanti" class="profile-avatar-img">
+                </div>
             </div>
-            <div class="actions"><button class="copy" data-url="https://web.altair.com/ai-powered-engineering-use-cases">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Sweco (Automação de Tarefas)</div>
-              <a href="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/" target="_blank" rel="noopener">https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/</a>
+            <h1>Leandro Cavalcanti</h1>
+            <p class="role">Especialista em Engenharia de Estruturas</p>
+            <p class="sub-role">Consultoria Interna na <span class="highlight">Motiva</span></p>
+            <p class="bio">Conectando engenharia de pontes, produtividade e inteligência artificial.</p>
+        </header>
+
+        <!-- Primary Actions (Socials) -->
+        <section class="links-section social-links">
+            <a href="https://www.linkedin.com/in/leandro-h-cavalcanti" target="_blank" rel="noopener"
+                class="btn btn-primary">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/eng.leandro.cavalcanti/" target="_blank" rel="noopener"
+                class="btn btn-secondary">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+        </section>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span>Recursos & IA</span>
+        </div>
+
+        <!-- Resources: YouTube Channels (NEW) -->
+        <section class="resource-group">
+            <h2><i class="fa-brands fa-youtube"></i> Canais & Vídeos Recomendados</h2>
+            <div class="card-grid">
+                <a href="https://www.youtube.com/@EngineeringManagementInstitute" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>Engineering Management Institute (EMI)</h3>
+                        <p>Discussões sobre IA e automação na engenharia civil.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://www.youtube.com/@CivilsAI" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>Civils.ai</h3>
+                        <p>Automação de workflows e construção com IA.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://www.youtube.com/@pyRevit" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>pyRevit</h3>
+                        <p>Automatização e APIs para Revit (Python).</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://www.youtube.com/@TheEfficientEngineer" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>The Efficient Engineer</h3>
+                        <p>Conceitos de engenharia explicados com clareza visual.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
-            <div class="actions"><button class="copy" data-url="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Rivian (Manutenção Preditiva)</div>
-              <a href="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/" target="_blank" rel="noopener">https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/</a>
+        </section>
+
+        <!-- Resources: Prompt Engineering -->
+        <section class="resource-group">
+            <h2><i class="fa-solid fa-microchip"></i> Kits de Prompts & Guias</h2>
+            <div class="card-grid">
+                <a href="https://ai.google.dev/gemini-api/prompts" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>Galeria de Prompts do Google AI Studio</h3>
+                        <p>Exemplos oficiais do Google</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://cookbook.openai.com/" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>OpenAI Cookbook</h3>
+                        <p>Receitas e exemplos de código</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>Guia de Prompt Engineering (OpenAI)</h3>
+                        <p>Documentação oficial de melhores práticas</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/dair-ai/Prompt-Engineering-Guide" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>Prompt Engineering Guide (dair-ai)</h3>
+                        <p>Guia completo e agnóstico de modelos</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/promptslab/Awesome-Prompt-Engineering" target="_blank" class="card">
+                    <div class="card-content">
+                        <h3>Awesome Prompt Engineering</h3>
+                        <p>Lista curada de recursos avançados</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
-            <div class="actions"><button class="copy" data-url="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">Shell (Manutenção Preditiva)</div>
-              <a href="https://smartdev.com/ai-in-use-cases-in-engineering/" target="_blank" rel="noopener">https://smartdev.com/ai-in-use-cases-in-engineering/</a>
+        </section>
+
+        <!-- Resources: Engineering Cases -->
+        <section class="resource-group">
+            <h2><i class="fa-solid fa-building-columns"></i> Cases de IA na Engenharia</h2>
+            <div class="card-list">
+                <a href="https://web.altair.com/ai-powered-engineering-use-cases" target="_blank" class="list-item">
+                    <span>Altair — 100 Casos de Uso</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/" target="_blank"
+                    class="list-item">
+                    <span>Sweco (Automação de Tarefas)</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="https://www.vktr.com/ai-disruption/5-ai-case-studies-in-engineering/" target="_blank"
+                    class="list-item">
+                    <span>Rivian (Manutenção Preditiva)</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="https://smartdev.com/ai-in-use-cases-in-engineering/" target="_blank" class="list-item">
+                    <span>Shell (Manutenção Preditiva)</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
             </div>
-            <div class="actions"><button class="copy" data-url="https://smartdev.com/ai-in-use-cases-in-engineering/">Copiar</button></div>
-          </li>
-          <li class="item">
-            <div>
-              <div class="title">ArcelorMittal (Otimização de Processos)</div>
-              <a href="https://smartdev.com/ai-in-use-cases-in-engineering/" target="_blank" rel="noopener">https://smartdev.com/ai-in-use-cases-in-engineering/</a>
-            </div>
-            <div class="actions"><button class="copy" data-url="https://smartdev.com/ai-in-use-cases-in-engineering/">Copiar</button></div>
-          </li>
-        </ul>
-      </div>
-    </section>
+        </section>
+
+    </main>
 
     <footer>
-      <p>© <span id="yr"></span> PUC‑SP • Esta página é estática e pode ser hospedada no GitHub Pages.</p>
+        <p>© <span id="year"></span> Leandro Cavalcanti</p>
     </footer>
-  </div>
 
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-    const copyAllBtn = document.getElementById('copyAll');
-    const items = Array.from(document.querySelectorAll('button.copy'));
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
-    items.forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const url = btn.getAttribute('data-url');
-        try { await navigator.clipboard.writeText(url); btn.textContent = 'Copiado!'; setTimeout(() => btn.textContent = 'Copiar', 1200); } catch(e){ alert('Não foi possível copiar'); }
-      });
-    });
-
-    copyAllBtn.addEventListener('click', async () => {
-      const urls = items.map(b => b.getAttribute('data-url')).join('\n');
-      try { await navigator.clipboard.writeText(urls); copyAllBtn.textContent = 'Todos copiados!'; setTimeout(() => copyAllBtn.innerHTML = 'Copiar <strong>todos</strong> os links', 1200); } catch(e){ alert('Não foi possível copiar'); }
-    });
-  </script>
 </body>
+
 </html>
